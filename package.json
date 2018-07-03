@@ -36,8 +36,8 @@
     "tweetnacl": "^1.0.0",
     "thrift": "git+https://github.com:vh/browser-thrift.git",
     "web3": "git+https://github.com/ethereum/web3.js.git",
-    "blockchain-rpc": "git+https://github.com/irisnet/blockchain-rpc.git#develop",
-    "irishub-rpc": "git+https://github.com/irisnet/irishub-rpc.git#develop"
+    "blockchain-rpc": "git+https://github.com/irisnet/blockchain-rpc.git#test-browser-thrift",
+    "irishub-rpc": "git+https://github.com/irisnet/irishub-rpc.git#test-browser-thrift"
   },
   "devDependencies": {
     "chai": "^4.1.2",
