@@ -10,6 +10,7 @@ const IrisKeypair = require('./keypair');
 const Codec = require("../../util/codec");
 const Config = require('../../../config');
 const Utils = require("../../util/utils");
+const create = require("./stdTx");
 
 class IrisBuilder extends Builder {
 
@@ -72,10 +73,7 @@ class IrisBuilder extends Builder {
                 throw new Error("not exist tx type");
             }
         }
-        let stdFee = Bank.NewStdFee(req.fees, req.gas);
-        let signMsg = Bank.NewStdSignMsg(req.chain_id, req.account_number, req.sequence, stdFee, msg, req.memo, req.type);
-        signMsg.ValidateBasic();
-        return Bank.NewStdTx(signMsg);
+        return create(req,msg)
     }
 
     /**
